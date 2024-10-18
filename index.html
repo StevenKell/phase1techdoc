@@ -13,47 +13,75 @@
 <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <nav id="navbar">
-        <header>oneAPI Kernel Math Library</header>
+        <header><h1>oneAPI Math Kernel Library</h1></header>
         <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#routines">Routines and Functions</a></li>
-            <li> <a class="nav-link" href="#supportfunctions">Support Functions</a>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Math_Routines_and_Functions">Math Routines and Functions</a></li>
+            <li> <a class="nav-link" href="#Support_Functions">Support Functions</a>
             </li>
-            <li> <a class="nav-link" href="#industryexamples">Industry Examples</a>
+            <li> <a class="nav-link" href="#Industry_Examples">Industry Examples</a>
             </li>
-            <li> <a class="nav-link" href="#codeexamples">Code Examples</a>
+            <li> <a class="nav-link" href="#Code_Examples">Code Examples</a>
             </li>
 
         </ul>
     </nav>
     <main id="main-doc">
-        <section id="introduction" class="main-section">
-            <header>Introduction</header>
+        <section id="Introduction" class="main-section">
+            <header><h2>Introduction</h2></header>
             <article>
                 <p>
                     This page about the oneAPI Math Kernel Library is intended for developers looking to use the C
-                    interface to integrate the api into Python applications. oneAPI
+                    interface to integrate the api into Python applications. The Math Kernel Library provides
+                    a number of techniques to optimize computations.
+
+                    From the <a
+                        href="https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-c/2024-2/performance-enhancements.html">official
+                        documentation</a> :
                 </p>
+                <ul>
+                    <li>Loop unrolling to minimize loop management costs</li>
+                    <li>Blocking of data to improve data reuse opportunities</li>
+                    <li>Copying to reduce chances of data eviction from cache</li>
+                    <li>Data prefetching to help hide memory latency</li>
+                    <li>Multiple simultaneous operations (for example, dot products in dgemm) to eliminate stalls due to
+                        arithmetic unit pipelines</li>
+                    <li>Use of hardware features such as the SIMD arithmetic units, where appropriate</li>
+                </ul>
+
             </article>
         </section>
-        <section id="routines" class="main-section">
+        <section id="Math_Routines_and_Functions" class="main-section">
             <header>
-                Math Routines and Functions
+                <h2>Math Routines and Functions</h2>
             </header>
             <article>
+                <p>BLAS - Basic Linear Algebra Subprogram functions are 
+                        grouped into three levels basic on the structures they operate on. 
+                    <ul>
+                        <li>level 1 : vector - vector operations </li>
+                        <li>level 2 : matrix - vector operations </li>
+                        <li>level 3 : matrix - matrix operations </li>
+                    </ul>
+                    
+                    </p>
+                    <p>
+                    Sparse BLAS - Used for vectors populated mostly with zeros, these functions are also grouped into 
+                    three levels.
+                </p>
                 <p>
-                <ul>
-                    <li>BLAS</li>
-                    <li>Sparse BLAS</li>
-                    <li>Sparse QR</li>
-                    <li>LAPACK</li>
-                </ul>
+                    Sparse QR
+                </p>
+                    
+                    
+                    LAPACK
+                
 
                 </p>
             </article>
         </section>
-        <section id="supportfunctions" class="main-section">
-            <header>Support Functions</header>
+        <section id="Support_Functions" class="main-section">
+            <header><h2>Support Functions</h2></header>
             <article>
                 <p>
                     Functions that help manage the usage of oneAPI MKL. Domains include Version Information,
@@ -61,32 +89,33 @@
                     Single Dynamic Library Control, Conditional Numerical Reproducibility Control.
                     Here is a random selection of functions:
                 <ul>
-                    <li>mkl_get_version - Returns the Intel® oneAPI Math Kernel Library (oneMKL) version.
-
-                    </li>
-                    <li>mkl_set_num_threads - Specifies the number of OpenMP* threads to use.
-
-                    </li>
-                    <li></li>
+                    <li> <code> mkl_get_version</code> - Returns the Intel® oneAPI Math Kernel Library (oneMKL) version.</li>
+                    <li> <code> mkl_set_num_threads</code> - Specifies the number of OpenMP* threads to use.</li>
+                    <li> <code>xerbla</code> Function for handling errors 
+                        used by BLAS, LAPACK, Vector Math, and Vector Statistics functions. Returns an error code. </li>
                 </ul>
 
                 </p>
             </article>
         </section>
-        <section id="industryexamples" class="main-section">
-            <header>Industry Examples</header>
+        <section id="Industry_Examples" class="main-section">
+            <header><h2>Industry Examples</h2></header>
             <article>
                 <p>
 
                 </p>
             </article>
         </section>
-        <section id="codeexamples" class="main-section">
-            <header>Code Examples</header>
+        <section id="Code_Examples" class="main-section">
+            <header><h2>Code Examples</h2></header>
             <article>
-                <p></p>
+                <p>
+                <code></code>
+                <code></code>
+
+                </p>
             </article>
-        
+
     </main>
 </body>
 

@@ -114,7 +114,7 @@ code {
 }
 
 @media only screen and (max-width: 400px) {
-    #main-doc {
+    body {
         margin-left: -10px;
     }
 
