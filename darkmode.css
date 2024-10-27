@@ -1,0 +1,64 @@
+/* //////////////////////////////////// */
+/* Changes color scheme when the system is 
+switched between light and dark mode. */
+/* //////////////////////////////////// */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-image: url("images/Happyhalloween.png");
+        background-size: auto;
+        background-position: 50% 50%;
+        font-family: "Emilys Candy", serif;
+        letter-spacing: 3px;
+    }
+
+    header h2 {
+        background-color: #000000;
+        width: 39vh;
+        text-align: center;
+        border-radius: 30px;
+        border: #e76610 groove 6px;
+
+    }
+
+
+
+    header h1 {
+        background-color: #000000;
+        border-radius: 30px;
+        border: outset #e76610 6px;
+
+
+    }
+
+
+    code {
+        background-color: #000000;
+        color: antiquewhite;
+    }
+
+    section article {
+        background-color: #e76610;
+        color: #ffffff;
+        font-size: large;
+        font-weight: 600;
+    }
+
+    hr {
+        background-color: rgb(220, 200, 20);
+    }
+
+    #navbar ul {
+        background-color: #000000;
+        border: #e76610 solid 3px;
+
+    }
+
+    img,
+    iframe
+
+    /* for recaptcha or web embed */
+        {
+        filter: invert(100%) !important;
+    }
+}
